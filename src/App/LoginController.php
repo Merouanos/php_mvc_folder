@@ -14,4 +14,11 @@ class LoginController
         return (Vue::make('Login/upload'));
 
     }
+    public function download(){
+        header('Content-Type :application/jpeg');
+        header('Content-Disposition: attachement;filename="myfile.jpeg"');
+        readfile(STORAGE_PATH.'/1.jpeg');
+
+
+    }
 }

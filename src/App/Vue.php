@@ -12,9 +12,7 @@ class Vue
         if(file_exists($realPath)){
 
             if(isset($layout)) {
-                ob_start();
-                include $layout->render();
-                return str_replace('{{content}}',file_get_contents($realPath),(string)ob_get_clean());
+                return $layout->render($realPath);
 
 
             }

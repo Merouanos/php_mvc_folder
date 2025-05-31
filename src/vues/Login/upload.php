@@ -1,5 +1,4 @@
-<h1>
 <pre>
-    <?php print_r($_POST)?>
-</pre>
-</h1>
+<?php
+var_dump($_FILES);?>
+    </pre>
